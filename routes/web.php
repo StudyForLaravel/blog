@@ -137,7 +137,8 @@ Route::get('admin', function () {
 
 Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
     Route::resource('admin/post', 'PostController@index');
-    Route::resource('admin/tag', 'TagController');
+    // Route::resource('admin/tag', 'TagController');
+    Route::resource('admin/tag', 'TagController', ['except' => 'show']);
     Route::get('admin/upload', 'UploadController@index');
 });
 
@@ -149,6 +150,3 @@ Route::post('/auth/login', 'HomeController@postLogin');
 Route::get('/auth/logout', 'HomeController@getLogout');
 
 
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index');
