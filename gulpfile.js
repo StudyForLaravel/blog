@@ -110,6 +110,14 @@ elixir(function(mix) {
         'resources/assets'
     );
 
+    // Combine blog scripts
+    mix.scripts([
+        'js/jquery.js',
+        'js/bootstrap.js',
+        'js/blog.js'
+    ], 'public/assets/js/blog.js', 'resources//assets');
+
     // 编译 Less 
     mix.less('admin.sass', 'public/assets/css/admin.css');
+    mix.less('blog.less', 'public/assets/css/blog.css');
 });
