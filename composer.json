@@ -9,8 +9,10 @@
         "laravel/framework": "5.3.*",
         "barryvdh/laravel-debugbar": "^2.3",
         "michelf/php-markdown": "^1.7",
-        "michelf/php-smartypants": "1.6.0-beta1",
-        "dflydev/apache-mime-types": "^1.0"
+        "michelf/php-smartypants": "dev-lib",
+        "dflydev/apache-mime-types": "^1.0",
+        "barryvdh/laravel-ide-helper": "^2.2",
+        "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -48,6 +50,8 @@
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan ide-helper:generate",
+            "php artisan ide-helper:meta",
             "php artisan optimize"
         ]
     },

@@ -1,0 +1,42 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"/node_modules",
+				"/public/storage",
+				"/storage/*.key",
+				"/vendor",
+				"/.idea",
+				"Homestead.json",
+				"Homestead.yaml",
+				".env"
+			],
+			"path": "."
+		},
+		{
+			"path": "D:\\wamp\\www\\phpstudylesson"
+		},
+		{
+			"path": "D:\\wamp\\www\\blog\\public"
+		},
+		{
+			"path": "D:\\wamp\\www\\vuejs"
+		}
+	],
+	"settings":
+	{
+		"xdebug":
+		{
+			"close_on_stop": true,
+			"path_mapping":
+			{
+			},
+			"port": 9000,
+			"super_globals": true,
+			"close_on_stop": true,
+			"url": ""
+		}
+	}
+}

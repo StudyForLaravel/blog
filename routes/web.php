@@ -136,7 +136,8 @@ Route::get('admin', function () {
  */
 
 Route::group(['namespace' => 'Admin', 'middleware' => 'auth'], function () {
-    Route::resource('admin/post', 'PostController@index');
+    Route::resource('admin/post', 'PostController', ['except' => 'show']);
+
     // Route::resource('admin/tag', 'TagController');
     Route::resource('admin/tag', 'TagController', ['except' => 'show']);
 
